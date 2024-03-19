@@ -168,3 +168,180 @@ if n>3:
 else:
     for i in range(0,n):
         print(mylist[i],end=" ")
+#Ex25
+words = []
+word = input()
+while word != 'КОНЕЦ':
+    words.append(word)
+    word = input()
+
+for w in words:
+    print(w)
+#Ex26
+words = []
+word = input()
+while word != 'КОНЕЦ' and word != 'конец':
+    words.append(word)
+    word = input()
+
+for w in words:
+    print(w)
+#Ex27
+words = []
+word = input()
+while word != 'стоп' and word != 'хватит' and word!='достаточно':
+    words.append(word)
+    word = input()
+print(len(words))
+#Ex28
+while True:
+    num = int(input())
+    if num % 7 == 0:
+        print(num)
+    else:
+        break
+#Ex29
+sum=0
+num=int(input())
+while num>0 and num<=5:
+    if num==5:
+        sum+=1
+    num=int(input())
+print(sum)
+#Ex30
+mylist=[25,10,5,1]
+sum=0
+num=int(input())
+cnt=0
+ss=0
+while sum!=num:
+    if sum+mylist[ss]<=num:
+        while sum+mylist[ss]<=num:
+            sum+=mylist[ss]
+            cnt+=1
+    else:
+        ss+=1
+        if ss>3:
+            break
+print(cnt)
+#Ex31
+num=int(input())
+while num!=0:
+    san=num%10
+    print(san)
+    num//=10
+#Ex32
+num=int(input())
+mylist=[]
+while num>0:
+    mylist.append(num%10)
+    num//=10
+for i in mylist:
+    print(i,end="")
+#Ex33
+num=int(input())
+maximum=-999
+minimum=999
+while num>0:
+    if num%10>maximum:
+        maximum=num%10
+    if num%10<minimum:
+        minimum=num%10
+    num//=10
+print("Максимальная цифра равна",maximum)
+print("Минимальная цифра равна",minimum)
+#Ex34
+num=int(input())
+sum=0
+cnt=0
+product=1
+srednee=0
+first=0
+sum_last=0
+last=num%10
+while num>0:
+    sum+=num%10
+    cnt+=1
+    product*=num%10
+    first=num%10
+    num//=10
+srednee=sum/cnt
+sum_last=first+last
+print(sum)
+print(cnt)
+print(product)
+print(srednee)
+print(first)
+print(sum_last)
+#Ex35
+cnt=0
+num=int(input())
+num1=num
+while num1>0:
+    cnt+=1
+    num1//=10
+cnt-=2
+if cnt==0:
+    print(num%10)
+else:
+    while cnt>0:
+        num//=10
+        cnt-=1
+    print(num%10)
+#Ex36
+num=int(input())
+last=num%10
+ans=True
+mylist=[]
+while num>0:
+    mylist.append(num%10)
+    num//=10
+for i in mylist:
+    if i!=last:
+        ans=False
+if ans:
+    print("YES")
+else:
+    print("No")
+#Ex37
+num=int(input())
+last=num%10
+num//=10
+ans=True
+while num>0:
+    if last>num%10:
+        ans=False
+        break
+    else:
+        last=num%10
+    num//=10
+if ans:
+    print("YES")
+else:
+    print("NO")
+#Ex38
+num=int(input())
+menshe=2
+if num%menshe==0:
+    print(menshe)
+else:
+    while num%menshe!=0:
+        menshe+=1
+    print(menshe)
+#Ex39
+num=int(input())
+mylist=[]
+for i in range(1,num+1):
+    mylist.append(i)
+for i in mylist:
+    if i==0:
+        continue
+    if i<5:
+        print(i)
+    if i>9 and i<17:
+        print(i)
+    if i>37 and i<78:
+        print(i)
+    if i>87:
+        print(i)
+        
